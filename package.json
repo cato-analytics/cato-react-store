@@ -1,0 +1,10 @@
+{
+  "name": "cato-react-store",
+  "version": "1.0.0",
+  "description": "A simple and easy to use Flux like state manager for react and react-native apps",
+  "main": "index.js",
+  "repository": "https://github.com/cato-analytics/cato-react-store",
+  "author": "Cato Analytics Ltd.",
+  "license": "MIT",
+  "private": false
+}
