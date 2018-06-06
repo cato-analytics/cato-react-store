@@ -1,6 +1,6 @@
 {
   "name": "cato-react-store",
-  "version": "1.0.5",
+  "version": "1.0.9",
   "description": "A simple and easy to use Flux like state manager for react and react-native apps",
   "main": "dist/index.js",
   "repository": "https://github.com/cato-analytics/cato-react-store",
@@ -14,13 +14,12 @@
     "state management"
   ],
   "scripts": {
-    "build": "webpack"
+    "build": "babel src/index.js --out-file dist/index.js"
   },
   "dependencies": {
     "lodash": "^4.17.10",
     "prop-types": "^15.6.1",
-    "react": "^16.4.0",
-    "webpack": "^4.11.1"
+    "react": "^16.4.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -28,8 +27,6 @@
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.5.1",
-    "webpack-cli": "^3.0.2"
+    "babel-plugin-transform-react-jsx": "^6.24.1"
   }
 }
