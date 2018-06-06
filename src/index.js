@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 
 export class StoreProvider extends React.Component {
-  static childContextTypes = {
-    store: PropTypes.object
-  }
   getChildContext() {
     return {
       store: {
@@ -19,12 +16,12 @@ export class StoreProvider extends React.Component {
   }
 }
 
+StoreProvider.childContextTypes = {
+  store: PropTypes.object
+};
+
 export const connect = (mapping) => ((Component) => {
-  return class extends React.Component {
-    static displayName = `${Component.name}Container`;
-    static contextTypes = {
-      store: PropTypes.object
-    }
+  let ComponentClass = class extends React.Component {
     render() {
       let props = mapping ? mapping(this.context.store, this.props) : {};
       return (
@@ -35,4 +32,11 @@ export const connect = (mapping) => ((Component) => {
       )
     }
   }
+
+  ComponentClass.displayName = `${Component.name}Container`;
+  ComponentClass.contextTypes = {
+    store: PropTypes.object
+  }
+
+  return ComponentClass;
 });
