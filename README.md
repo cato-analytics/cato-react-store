@@ -22,7 +22,7 @@ yarn add cato-react-store
 
 ### src/index.js
 
-First import the `StoreProvider'
+First import the `StoreProvider`
 
 ```
 import { StoreProvider } from 'cato-react-store';
