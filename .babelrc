@@ -1,7 +1,20 @@
 {
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "loose": true,
+        "shippedProposals": true,
+        "modules": "commonjs",
+        "targets": {
+          "ie": 11
+        }
+      }
+    ]
+  ],
   "plugins": [
     "transform-class-properties",
-    "transform-object-rest-spread",
+    "@babel/plugin-proposal-object-rest-spread",
     "transform-react-jsx"
   ]
 }
