@@ -51,7 +51,7 @@ function (_React$Component) {
 
 exports.StoreProvider = StoreProvider;
 StoreProvider.childContextTypes = {
-  store: _propTypes.default.shape
+  store: _propTypes.default.shape()
 };
 
 var connect = function connect(mapping) {
@@ -78,7 +78,7 @@ var connect = function connect(mapping) {
 
     ComponentClass.displayName = Component.name + "Container";
     ComponentClass.contextTypes = {
-      store: _propTypes.default.shape
+      store: _propTypes.default.shape()
     };
     return ComponentClass;
   };

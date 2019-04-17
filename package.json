@@ -14,7 +14,8 @@
     "state management"
   ],
   "scripts": {
-    "build": "babel src/index.js --out-file dist/index.js"
+    "build": "babel src/index.js --out-file dist/index.js",
+    "push": "git add . && git commit && git push origin master"
   },
   "dependencies": {
     "lodash": "^4.17.10",

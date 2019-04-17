@@ -21,7 +21,7 @@ export class StoreProvider extends React.Component {
 }
 
 StoreProvider.childContextTypes = {
-  store: PropTypes.shape,
+  store: PropTypes.shape(),
 };
 
 export const connect = mapping => ((Component) => {
@@ -40,7 +40,7 @@ export const connect = mapping => ((Component) => {
 
   ComponentClass.displayName = `${Component.name}Container`;
   ComponentClass.contextTypes = {
-    store: PropTypes.shape,
+    store: PropTypes.shape(),
   };
 
   return ComponentClass;
